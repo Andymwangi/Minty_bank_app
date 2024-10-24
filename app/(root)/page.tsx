@@ -1,9 +1,40 @@
-import React from 'react'
+import HeaderBox from '@/components/HeaderBox';
 
-const page = () => {
+import RightSidebar from '@/components/RightSidebar';
+import TotalBalanceBox from '@/components/TotalBalanceBox';
+
+const Home = async () => {
+  const loggedIn = {firstName: 'Andy', lastName: 'Mwangi', email: 'anderson.mitamboo@gmail.com'};
+
+
   return (
-    <div>Home</div>
+    <section className="home">
+      <div className="home-content">
+        <header className="home-header">
+          <HeaderBox 
+            type="greeting"
+            title="Welcome"
+            user={loggedIn?.firstName || 'Guest'}
+            subtext="Access and manage your account and transactions efficiently."
+          />
+
+          <TotalBalanceBox 
+            accounts={[]}
+            totalBanks={1}
+            totalCurrentBalance={34500.53}
+          />
+        </header>
+
+
+      </div>
+
+      <RightSidebar 
+        user={loggedIn}
+        transactions={[]}
+        banks={[{currentBalance: 34500.78}, {currentBalance: 23459.90}]}
+      />
+    </section>
   )
 }
 
-export default page
+export default Home
