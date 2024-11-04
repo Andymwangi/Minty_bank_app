@@ -134,10 +134,9 @@ const AuthForm = ({ type }: { type: string }) => {
                     <CustomInput control={form.control} name='state' label="Sub-county" placeholder='Ex:NJ for Njiru' />
                     <CustomInput control={form.control} name='postalCode' label="Postal Code" placeholder='Ex:11101: 5-digit numerals' />
                   </div>
-                  <div className="flex gap-4">
                     <CustomInput control={form.control} name='dateOfBirth' label="Date of Birth" placeholder='YYYY-MM-DD' />
-                    <CustomInput control={form.control} name='ssn' label="ID NO" placeholder='Paste:1234 ' />
-                  </div>
+                    <CustomInput control={form.control} name='ssn' label="ID NO" placeholder='Enter 4-digit numeral ID  ' />
+        
                 </>
               )}
 
